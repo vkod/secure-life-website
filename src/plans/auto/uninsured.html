@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uninsured Motorist Coverage - SecureLife Insurance</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/plan-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" data-track="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="../../index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 10V30M10 20H30" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>SecureLife</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#products">Products</a></li>
+                    <li><a href="../../index.html#gpt">SecureLife GPT</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                    <li><a href="#" class="btn-quote" onclick="openQuoteModal()">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="plan-hero" data-track-view="uninsured-motorist-hero">
+        <div class="container">
+            <div class="plan-hero-content">
+                <div class="plan-hero-text">
+                    <div class="plan-badge">Extra Protection</div>
+                    <h1>Uninsured Motorist Coverage</h1>
+                    <p class="plan-tagline">Protection from uninsured and underinsured drivers</p>
+                    <div class="plan-highlights">
+                        <div class="highlight-item"><span class="highlight-icon">🛡️</span><span>Hit and run coverage</span></div>
+                        <div class="highlight-item"><span class="highlight-icon">🚗</span><span>Underinsured drivers</span></div>
+                        <div class="highlight-item"><span class="highlight-icon">🏥</span><span>Medical payments</span></div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" onclick="startApplication('uninsured-motorist')" data-track-click="start-uninsured-app">Apply Now</button>
+                        <button class="btn btn-secondary btn-lg" onclick="downloadBrochure('auto-insurance')" data-track-click="download-auto-brochure">
+                            <span>📥</span> Download Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class="plan-hero-image">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600" alt="Uninsured Motorist Coverage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan-details" data-track-view="uninsured-motorist-details">
+        <div class="container">
+            <div class="details-card">
+                <h2>Protection When Others Don't Have Insurance</h2>
+                <p>Uninsured motorist coverage protects you when other drivers lack adequate insurance or flee the scene.</p>
+                <div style="margin-top: 2rem;">
+                    <h3>What's Covered</h3>
+                    <ul class="benefits-list">
+                        <li><span class="benefit-icon">✓</span><div><strong>Hit and Run Accidents</strong><p>Coverage when the at-fault driver flees the scene</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Uninsured Drivers</strong><p>Protection when the other driver has no insurance</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Underinsured Drivers</strong><p>Coverage when other driver's insurance isn't enough</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Medical Expenses</strong><p>Covers your medical bills and passengers</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Lost Wages</strong><p>Compensation for work missed due to injuries</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Pain and Suffering</strong><p>Additional compensation for serious injuries</p></div></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4 style="color: #92400e;">Did You Know?</h4>
+                    <p style="color: #78350f;">1 in 8 drivers on the road are uninsured. In some states, this number is as high as 1 in 4. Protect yourself with uninsured motorist coverage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>SecureLife Insurance</h4>
+                    <p>Your trusted partner since 1970.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact</h5>
+                    <p>📞 1-800-SECURE-1</p>
+                    <p>✉️ info@securelife.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/tracking.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/plan-details.js"></script>
+    <script src="../../js/brochure-generator.js"></script>
+    <script src="../../js/gpt-chat.js"></script>
+</body>
+</html>

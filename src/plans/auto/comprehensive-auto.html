@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Auto Insurance - SecureLife Insurance</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/plan-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" data-track="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="../../index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 10V30M10 20H30" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>SecureLife</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#products">Products</a></li>
+                    <li><a href="../../index.html#gpt">SecureLife GPT</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                    <li><a href="#" class="btn-quote" onclick="openQuoteModal()">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="plan-hero" data-track-view="comprehensive-auto-hero">
+        <div class="container">
+            <div class="plan-hero-content">
+                <div class="plan-hero-text">
+                    <div class="plan-badge">Complete Coverage</div>
+                    <h1>Comprehensive Auto Insurance</h1>
+                    <p class="plan-tagline">Full protection for your vehicle</p>
+                    <div class="plan-highlights">
+                        <div class="highlight-item"><span class="highlight-icon">🚗</span><span>Collision & comprehensive</span></div>
+                        <div class="highlight-item"><span class="highlight-icon">⚖️</span><span>Liability protection</span></div>
+                        <div class="highlight-item"><span class="highlight-icon">🛠️</span><span>Roadside assistance</span></div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" onclick="startApplication('comprehensive-auto')" data-track-click="start-comprehensive-auto-app">Apply Now</button>
+                        <button class="btn btn-secondary btn-lg" onclick="downloadBrochure('auto-insurance')" data-track-click="download-auto-brochure">
+                            <span>📥</span> Download Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class="plan-hero-image">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" alt="Comprehensive Auto Insurance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan-details" data-track-view="comprehensive-auto-details">
+        <div class="container">
+            <div class="details-card">
+                <h2>Complete Auto Protection</h2>
+                <p>Our comprehensive auto insurance provides complete protection for your vehicle with all coverage types included.</p>
+                <div style="margin-top: 2rem;">
+                    <h3>Coverage Includes</h3>
+                    <ul class="benefits-list">
+                        <li><span class="benefit-icon">✓</span><div><strong>Collision Coverage</strong><p>Covers damage from accidents with other vehicles or objects</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Comprehensive Coverage</strong><p>Protection from theft, vandalism, weather, and other non-collision damage</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Liability Protection</strong><p>Covers damage and injuries you cause to others</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Uninsured Motorist</strong><p>Protection when other drivers lack insurance</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Medical Payments</strong><p>Covers medical expenses for you and passengers</p></div></li>
+                        <li><span class="benefit-icon">✓</span><div><strong>Roadside Assistance</strong><p>24/7 help for breakdowns, flat tires, and lockouts</p></div></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <h3>Available Discounts</h3>
+                    <ul>
+                        <li>Safe Driver: Up to 25% off</li>
+                        <li>Multi-Car: 20% off</li>
+                        <li>Good Student: 15% off</li>
+                        <li>Anti-Theft Devices: 10% off</li>
+                        <li>Bundle with Home: 15% off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>SecureLife Insurance</h4>
+                    <p>Your trusted partner since 1970.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact</h5>
+                    <p>📞 1-800-SECURE-1</p>
+                    <p>✉️ info@securelife.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/tracking.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/plan-details.js"></script>
+    <script src="../../js/brochure-generator.js"></script>
+    <script src="../../js/gpt-chat.js"></script>
+</body>
+</html>

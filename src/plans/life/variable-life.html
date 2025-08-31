@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Life Insurance - SecureLife Insurance</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/plan-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" data-track="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="../../index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 10V30M10 20H30" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>SecureLife</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#products">Products</a></li>
+                    <li><a href="../../index.html#gpt">SecureLife GPT</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                    <li><a href="#" class="btn-quote" onclick="openQuoteModal()">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Plan Hero Section -->
+    <section class="plan-hero" data-track-view="variable-life-hero">
+        <div class="container">
+            <div class="plan-hero-content">
+                <div class="plan-hero-text">
+                    <div class="plan-badge">Investment-Linked</div>
+                    <h1>Variable Life Insurance</h1>
+                    <p class="plan-tagline">Life insurance with investment growth potential</p>
+                    <div class="plan-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📈</span>
+                            <span>Investment options</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💼</span>
+                            <span>Professional management</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎯</span>
+                            <span>Growth potential</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" onclick="startApplication('variable-life')" data-track-click="start-variable-life-app">Apply Now</button>
+                        <button class="btn btn-secondary btn-lg" onclick="downloadBrochure('variable-life')" data-track-click="download-variable-brochure">
+                            <span>📥</span> Download Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class="plan-hero-image">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600" alt="Variable Life Insurance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Details -->
+    <section class="plan-details" data-track-view="variable-life-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Coverage Details -->
+                <div class="details-card">
+                    <h2>Investment Options</h2>
+                    <div class="coverage-table">
+                        <div class="coverage-row">
+                            <span class="coverage-label">Equity Funds</span>
+                            <span class="coverage-value">15+ options</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Bond Funds</span>
+                            <span class="coverage-value">10+ options</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Money Market</span>
+                            <span class="coverage-value">Stable value option</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">International Funds</span>
+                            <span class="coverage-value">Global diversification</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Sector Funds</span>
+                            <span class="coverage-value">Technology, Healthcare, etc.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Benefits -->
+                <div class="details-card">
+                    <h2>Key Benefits</h2>
+                    <ul class="benefits-list">
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Investment Control</strong>
+                                <p>Choose from professionally managed investment options</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Higher Growth Potential</strong>
+                                <p>Potential for greater returns than traditional life insurance</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Tax-Deferred Growth</strong>
+                                <p>Investment gains grow tax-free within the policy</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>SecureLife Insurance</h4>
+                    <p>Your trusted partner since 1970.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact</h5>
+                    <p>📞 1-800-SECURE-1</p>
+                    <p>✉️ info@securelife.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/tracking.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/plan-details.js"></script>
+    <script src="../../js/brochure-generator.js"></script>
+    <script src="../../js/gpt-chat.js"></script>
+</body>
+</html>

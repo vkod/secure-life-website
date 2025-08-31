@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Collision Coverage - SecureLife Insurance</title>
+    <link rel='stylesheet' href='../../css/styles.css'>
+    <link rel='stylesheet' href='../../css/plan-details.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+</head>
+<body>
+    <nav class='navbar' data-track='navigation'>
+        <div class='container'>
+            <div class='nav-wrapper'>
+                <div class='logo'>
+                    <a href='../../index.html' style='display: flex; align-items: center; text-decoration: none; color: inherit;'>
+                        <svg width='40' height='40' viewBox='0 0 40 40' fill='none'>
+                            <circle cx='20' cy='20' r='18' stroke='#2563eb' stroke-width='2'/>
+                            <path d='M20 10V30M10 20H30' stroke='#2563eb' stroke-width='2' stroke-linecap='round'/>
+                        </svg>
+                        <span>SecureLife</span>
+                    </a>
+                </div>
+                <ul class='nav-menu'>
+                    <li><a href='../../index.html'>Home</a></li>
+                    <li><a href='../../index.html#products'>Products</a></li>
+                    <li><a href='../../index.html#gpt'>SecureLife GPT</a></li>
+                    <li><a href='../../index.html#contact'>Contact</a></li>
+                    <li><a href='#' class='btn-quote' onclick='openQuoteModal()'>Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class='plan-hero' data-track-view='auto-collision-hero'>
+        <div class='container'>
+            <div class='plan-hero-content'>
+                <div class='plan-hero-text'>
+                    <div class='plan-badge'>Accident Protection</div>
+                    <h1>Collision Coverage</h1>
+                    <p class='plan-tagline'>Protection for accident damage</p>
+                    <div class='plan-highlights'>
+                        <div class='highlight-item'><span class='highlight-icon'>✓</span><span>Accident damage</span></div><div class='highlight-item'><span class='highlight-icon'>✓</span><span>Hit and run</span></div><div class='highlight-item'><span class='highlight-icon'>✓</span><span>Single car accidents</span></div>
+                    </div>
+                    <div class='hero-actions'>
+                        <button class='btn btn-primary btn-lg' onclick='startApplication("auto-collision")' data-track-click='start-auto-collision-app'>Apply Now</button>
+                        <button class='btn btn-secondary btn-lg' onclick='downloadBrochure("auto-collision")' data-track-click='download-auto-collision-brochure'>
+                            <span>📥</span> Download Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class='plan-hero-image'>
+                    <img src='https://images.unsplash.com/photo-1582624267249-037e18e6f3e6?w=600' alt='Collision Coverage'>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='plan-details' data-track-view='auto-collision-details'>
+        <div class='container'>
+            <div class='details-card'>
+                <h2>Coverage Details</h2>
+                <p>Coverage for damage from collisions</p>
+                <div style='margin-top: 2rem;'>
+                    <h3>Key Features</h3>
+                    <ul class='benefits-list'>
+                        <li><span class='benefit-icon'>✓</span><div><strong>Accident damage</strong><p>Comprehensive coverage included</p></div></li><li><span class='benefit-icon'>✓</span><div><strong>Hit and run</strong><p>Comprehensive coverage included</p></div></li><li><span class='benefit-icon'>✓</span><div><strong>Single car accidents</strong><p>Comprehensive coverage included</p></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class='footer'>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-column'>
+                    <h4>SecureLife Insurance</h4>
+                    <p>Your trusted partner since 1970.</p>
+                </div>
+                <div class='footer-column'>
+                    <h5>Contact</h5>
+                    <p>📞 1-800-SECURE-1</p>
+                    <p>✉️ info@securelife.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../../js/tracking.js'></script>
+    <script src='../../js/main.js'></script>
+    <script src='../../js/plan-details.js'></script>
+    <script src='../../js/brochure-generator.js'></script>
+    <script src='../../js/gpt-chat.js'></script>
+</body>
+</html>

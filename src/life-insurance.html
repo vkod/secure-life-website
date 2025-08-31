@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance Plans - SecureLife Insurance</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same as main page) -->
+    <nav class="navbar" data-track="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2"/>
+                        <path d="M20 10V30M10 20H30" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>SecureLife</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-track-click="nav-home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-track-click="nav-products">Products</a>
+                        <div class="dropdown-content">
+                            <a href="life-insurance.html" data-track-click="nav-life" class="active">Life Insurance</a>
+                            <a href="health-insurance.html" data-track-click="nav-health">Health Insurance</a>
+                        </div>
+                    </li>
+                    <li><a href="#about" data-track-click="nav-about">About Us</a></li>
+                    <li><a href="#contact" data-track-click="nav-contact">Contact</a></li>
+                    <li><a href="#" class="btn-quote" data-track-click="nav-quote">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="product-hero" data-track-view="life-insurance-hero">
+        <div class="container">
+            <div class="product-hero-content">
+                <h1>Life Insurance Plans</h1>
+                <p>Protect your family's future with comprehensive life insurance coverage</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> > <span>Life Insurance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life Insurance Plans -->
+    <section class="plans-section" data-track-view="life-plans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Life Insurance Plan</h2>
+                <p>Find the perfect coverage that fits your needs and budget</p>
+            </div>
+            
+            <div class="plans-grid">
+                <!-- Term Life Insurance -->
+                <div class="plan-card" data-track-hover="term-life-plan">
+                    <div class="plan-badge">Most Popular</div>
+                    <h3>Term Life Insurance</h3>
+                    <div class="plan-price">
+                        <span class="from">From</span>
+                        <span class="amount">$15</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-description">Affordable coverage for a specific period with maximum protection</p>
+                    <ul class="plan-features">
+                        <li>Coverage periods: 10, 20, or 30 years</li>
+                        <li>Death benefit: $100,000 - $2,000,000</li>
+                        <li>Fixed premiums throughout the term</li>
+                        <li>Convertible to permanent coverage</li>
+                        <li>No medical exam options available</li>
+                        <li>Accelerated death benefit rider</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" data-track-click="select-term-life" onclick="selectPlan('term-life')">Get Term Life Quote</button>
+                </div>
+
+                <!-- Whole Life Insurance -->
+                <div class="plan-card featured" data-track-hover="whole-life-plan">
+                    <div class="plan-badge premium">Premium Choice</div>
+                    <h3>Whole Life Insurance</h3>
+                    <div class="plan-price">
+                        <span class="from">From</span>
+                        <span class="amount">$85</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-description">Lifetime coverage with cash value accumulation</p>
+                    <ul class="plan-features">
+                        <li>Guaranteed lifetime coverage</li>
+                        <li>Cash value growth component</li>
+                        <li>Fixed premiums for life</li>
+                        <li>Tax-deferred growth</li>
+                        <li>Dividend earning potential</li>
+                        <li>Loan and withdrawal options</li>
+                        <li>Estate planning benefits</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" data-track-click="select-whole-life" onclick="selectPlan('whole-life')">Get Whole Life Quote</button>
+                </div>
+
+                <!-- Universal Life Insurance -->
+                <div class="plan-card" data-track-hover="universal-life-plan">
+                    <div class="plan-badge">Flexible</div>
+                    <h3>Universal Life Insurance</h3>
+                    <div class="plan-price">
+                        <span class="from">From</span>
+                        <span class="amount">$50</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-description">Flexible premiums and death benefits with investment options</p>
+                    <ul class="plan-features">
+                        <li>Flexible premium payments</li>
+                        <li>Adjustable death benefits</li>
+                        <li>Cash value accumulation</li>
+                        <li>Investment options available</li>
+                        <li>Tax-advantaged growth</li>
+                        <li>Premium flexibility</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" data-track-click="select-universal-life" onclick="selectPlan('universal-life')">Get Universal Life Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Calculator -->
+    <section class="calculator-section" data-track-view="coverage-calculator">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <h2>How Much Life Insurance Do You Need?</h2>
+                <p>Use our calculator to determine your ideal coverage amount</p>
+                
+                <div class="calculator-form">
+                    <div class="calc-row">
+                        <div class="calc-group">
+                            <label>Annual Income</label>
+                            <input type="number" id="annual-income" placeholder="$75,000" data-track-input="calc-income">
+                        </div>
+                        <div class="calc-group">
+                            <label>Years to Replace Income</label>
+                            <input type="number" id="years-replace" placeholder="10" data-track-input="calc-years">
+                        </div>
+                    </div>
+                    <div class="calc-row">
+                        <div class="calc-group">
+                            <label>Outstanding Debts</label>
+                            <input type="number" id="debts" placeholder="$200,000" data-track-input="calc-debts">
+                        </div>
+                        <div class="calc-group">
+                            <label>Future Expenses (Education, etc.)</label>
+                            <input type="number" id="future-expenses" placeholder="$100,000" data-track-input="calc-expenses">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="calculateCoverage()" data-track-click="calculate-coverage">Calculate Coverage</button>
+                    
+                    <div id="calc-result" class="calc-result" style="display: none;">
+                        <h3>Recommended Coverage:</h3>
+                        <div class="coverage-amount">$0</div>
+                        <button class="btn btn-secondary" onclick="applyForCoverage()" data-track-click="apply-from-calc">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application-section" id="apply" data-track-view="life-application-form">
+        <div class="container">
+            <div class="application-wrapper">
+                <h2>Apply for Life Insurance</h2>
+                <p>Get your personalized quote in minutes</p>
+                
+                <form id="lifeApplicationForm" class="application-form" data-track-form="life-application">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" name="firstName" required data-track-input="life-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" name="lastName" required data-track-input="life-last-name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Date of Birth *</label>
+                                <input type="date" name="dob" required data-track-input="life-dob">
+                            </div>
+                            <div class="form-group">
+                                <label>Gender *</label>
+                                <select name="gender" required data-track-select="life-gender">
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" name="email" required data-track-input="life-email">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone *</label>
+                                <input type="tel" name="phone" required data-track-input="life-phone">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Coverage Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Plan Type *</label>
+                                <select name="planType" required data-track-select="life-plan-type">
+                                    <option value="">Select Plan</option>
+                                    <option value="term">Term Life</option>
+                                    <option value="whole">Whole Life</option>
+                                    <option value="universal">Universal Life</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Coverage Amount *</label>
+                                <select name="coverageAmount" required data-track-select="life-coverage-amount">
+                                    <option value="">Select Amount</option>
+                                    <option value="100000">$100,000</option>
+                                    <option value="250000">$250,000</option>
+                                    <option value="500000">$500,000</option>
+                                    <option value="750000">$750,000</option>
+                                    <option value="1000000">$1,000,000</option>
+                                    <option value="2000000">$2,000,000+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="termLength" style="display: none;">
+                            <label>Term Length</label>
+                            <select name="termLength" data-track-select="life-term-length">
+                                <option value="">Select Term</option>
+                                <option value="10">10 Years</option>
+                                <option value="20">20 Years</option>
+                                <option value="30">30 Years</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Health Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Height</label>
+                                <input type="text" name="height" placeholder="5'10&quot;" data-track-input="life-height">
+                            </div>
+                            <div class="form-group">
+                                <label>Weight</label>
+                                <input type="number" name="weight" placeholder="180 lbs" data-track-input="life-weight">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you use tobacco products? *</label>
+                            <select name="tobacco" required data-track-select="life-tobacco">
+                                <option value="">Select</option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Any major health conditions?</label>
+                            <textarea name="healthConditions" rows="3" placeholder="Please list any major health conditions" data-track-input="life-health"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required data-track-checkbox="life-consent">
+                            <span>I agree to the Terms & Conditions and authorize SecureLife to contact me</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" data-track-click="submit-life-application">Get My Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as main page) -->
+    <footer class="footer" data-track-view="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>SecureLife Insurance</h4>
+                    <p>Your trusted partner for comprehensive insurance solutions since 1970.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Products</h5>
+                    <ul>
+                        <li><a href="life-insurance.html">Life Insurance</a></li>
+                        <li><a href="health-insurance.html">Health Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact</h5>
+                    <p>📞 1-800-SECURE-1</p>
+                    <p>✉️ info@securelife.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tracking.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/life-insurance.js"></script>
+</body>
+</html>

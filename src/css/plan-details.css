@@ -1,0 +1,459 @@
+/* Plan Details Page Styles */
+
+.breadcrumb-section {
+    padding: 1rem 0;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Mega Menu */
+.mega-menu {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    min-width: 800px;
+    padding: 1.5rem !important;
+    gap: 2rem;
+}
+
+.mega-menu-column h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mega-menu-column a {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Plan Hero */
+.plan-hero {
+    padding: 3rem 0 4rem;
+    background: linear-gradient(135deg, #f9fafb 0%, #e0e7ff 100%);
+}
+
+.plan-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.plan-badge {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.plan-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.plan-tagline {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+
+.plan-highlights {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.highlight-icon {
+    font-size: 1.25rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.plan-hero-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Plan Details */
+.plan-details {
+    padding: 4rem 0;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.details-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.details-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.coverage-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.coverage-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.coverage-row:last-child {
+    border-bottom: none;
+}
+
+.coverage-label {
+    font-weight: 500;
+    color: var(--text-gray);
+}
+
+.coverage-value {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.benefits-list {
+    list-style: none;
+}
+
+.benefits-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.benefit-icon {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.benefits-list strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+}
+
+.benefits-list p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* Premium Calculator */
+.premium-calculator-card {
+    background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 3rem;
+}
+
+.premium-calculator-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.calc-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.calc-input input,
+.calc-input select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: white;
+}
+
+.calc-input input:focus,
+.calc-input select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.premium-result {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.premium-result p {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.premium-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Riders Section */
+.riders-section {
+    margin-bottom: 3rem;
+}
+
+.riders-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.riders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.rider-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.rider-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.rider-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
+
+.rider-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.rider-cost {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 3rem;
+}
+
+.faq-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: var(--bg-light);
+}
+
+.faq-question h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-section .btn-secondary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.cta-section .btn-secondary:hover {
+    background: var(--bg-light);
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mega-menu {
+        grid-template-columns: 1fr;
+        min-width: 100%;
+    }
+    
+    .plan-hero-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+}

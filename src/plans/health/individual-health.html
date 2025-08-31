@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Health Insurance - SecureLife Insurance</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/plan-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" data-track="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="../../index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 10V30M10 20H30" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>SecureLife</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#products">Products</a></li>
+                    <li><a href="../../index.html#gpt">SecureLife GPT</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                    <li><a href="#" class="btn-quote" onclick="openQuoteModal()">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Plan Hero Section -->
+    <section class="plan-hero health-hero" data-track-view="individual-health-hero">
+        <div class="container">
+            <div class="plan-hero-content">
+                <div class="plan-hero-text">
+                    <div class="plan-badge">Comprehensive Coverage</div>
+                    <h1>Individual Health Insurance</h1>
+                    <p class="plan-tagline">Personal healthcare coverage tailored to your needs</p>
+                    <div class="plan-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🏥</span>
+                            <span>10,000+ hospitals</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">👨‍⚕️</span>
+                            <span>50,000+ doctors</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💊</span>
+                            <span>Prescription coverage</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" onclick="startApplication('individual-health')" data-track-click="start-individual-health-app">Apply Now</button>
+                        <button class="btn btn-secondary btn-lg" onclick="downloadBrochure('health-insurance')" data-track-click="download-health-brochure">
+                            <span>📥</span> Download Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class="plan-hero-image">
+                    <img src="https://images.unsplash.com/photo-1559328007-7b6d3c1a1c6e?w=600" alt="Individual Health Insurance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Options -->
+    <section class="plan-details" data-track-view="individual-health-plans">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Choose Your Coverage Level</h2>
+            <div class="plans-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Bronze Plan -->
+                <div class="plan-box" style="border: 2px solid #cd7f32; padding: 2rem;">
+                    <h3 style="color: #cd7f32;">🥉 Bronze Plan</h3>
+                    <div class="plan-price">
+                        <span class="amount">$150</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul>
+                        <li>Annual deductible: $6,000</li>
+                        <li>Out-of-pocket max: $8,700</li>
+                        <li>Preventive care: 100% covered</li>
+                        <li>Primary care: $45 copay</li>
+                        <li>Specialist: $75 copay</li>
+                        <li>Generic drugs: $10</li>
+                        <li>Emergency room: 40% after deductible</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block" onclick="selectHealthPlan('bronze-individual')">Select Bronze</button>
+                </div>
+
+                <!-- Silver Plan -->
+                <div class="plan-box featured" style="border: 2px solid #c0c0c0; padding: 2rem; transform: scale(1.05);">
+                    <div class="plan-badge">Most Popular</div>
+                    <h3 style="color: #666;">🥈 Silver Plan</h3>
+                    <div class="plan-price">
+                        <span class="amount">$275</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul>
+                        <li>Annual deductible: $3,500</li>
+                        <li>Out-of-pocket max: $7,000</li>
+                        <li>Preventive care: 100% covered</li>
+                        <li>Primary care: $30 copay</li>
+                        <li>Specialist: $60 copay</li>
+                        <li>Generic drugs: $5</li>
+                        <li>Emergency room: $350 + 20%</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" onclick="selectHealthPlan('silver-individual')">Select Silver</button>
+                </div>
+
+                <!-- Gold Plan -->
+                <div class="plan-box" style="border: 2px solid #ffd700; padding: 2rem;">
+                    <h3 style="color: #d4af37;">🥇 Gold Plan</h3>
+                    <div class="plan-price">
+                        <span class="amount">$425</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul>
+                        <li>Annual deductible: $1,500</li>
+                        <li>Out-of-pocket max: $5,000</li>
+                        <li>Preventive care: 100% covered</li>
+                        <li>Primary care: $20 copay</li>
+                        <li>Specialist: $40 copay</li>
+                        <li>Generic drugs: No copay</li>
+                        <li>Emergency room: $250 copay</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block" onclick="selectHealthPlan('gold-individual')">Select Gold</button>
+                </div>
+            </div>
+
+            <!-- Coverage Details -->
+            <div class="details-card" style="margin-top: 3rem;">
+                <h2>What's Covered</h2>
+                <div class="coverage-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4>Medical Services</h4>
+                        <ul>
+                            <li>Doctor visits</li>
+                            <li>Hospital stays</li>
+                            <li>Surgery</li>
+                            <li>Emergency care</li>
+                            <li>Urgent care</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Preventive Care</h4>
+                        <ul>
+                            <li>Annual checkups</li>
+                            <li>Vaccinations</li>
+                            <li>Screenings</li>
+                            <li>Wellness programs</li>
+                            <li>Health coaching</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Prescription Drugs</h4>
+                        <ul>
+                            <li>Generic medications</li>
+                            <li>Brand medications</li>
+                            <li>Specialty drugs</li>
+                            <li>Mail-order pharmacy</li>
+                            <li>90-day supplies</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Additional Benefits</h4>
+                        <ul>
+                            <li>Mental health services</li>
+                            <li>Telehealth visits</li>
+                            <li>Vision discounts</li>
+                            <li>Dental discounts</li>
+                            <li>Gym membership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>SecureLife Insurance</h4>
+                    <p>Your trusted partner since 1970.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact</h5>
+                    <p>📞 1-800-SECURE-1</p>
+                    <p>✉️ info@securelife.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/tracking.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/plan-details.js"></script>
+    <script src="../../js/health-insurance.js"></script>
+    <script src="../../js/brochure-generator.js"></script>
+    <script src="../../js/gpt-chat.js"></script>
+</body>
+</html>

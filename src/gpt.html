@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureLife GPT - AI Insurance Assistant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gpt-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar gpt-navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 10V30M10 20H30" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>SecureLife GPT</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><button class="btn-new-chat" onclick="startNewChat()">+ New Chat</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main GPT Interface -->
+    <div class="gpt-container">
+        <!-- Sidebar -->
+        <aside class="gpt-sidebar">
+            <div class="sidebar-header">
+                <h3>Chat History</h3>
+                <button class="btn-clear-history" onclick="clearHistory()">Clear All</button>
+            </div>
+            <div class="chat-history" id="chatHistory">
+                <div class="history-item active">
+                    <span class="history-icon">💬</span>
+                    <span class="history-title">New Chat</span>
+                    <span class="history-time">Now</span>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="quick-links">
+                    <h4>Quick Actions</h4>
+                    <button onclick="quickAction('compare')">📊 Compare Plans</button>
+                    <button onclick="quickAction('quote')">💰 Get Quote</button>
+                    <button onclick="quickAction('claim')">📋 File Claim</button>
+                    <button onclick="quickAction('coverage')">🛡️ Check Coverage</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="gpt-main">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome Message -->
+                <div class="message-wrapper">
+                    <div class="message assistant">
+                        <div class="message-avatar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 6V18M6 12H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-header">SecureLife GPT</div>
+                            <div class="message-body markdown-content">
+                                <h2>Welcome to SecureLife GPT! 🤖</h2>
+                                <p>I'm your AI-powered insurance assistant. I can help you with:</p>
+                                <ul>
+                                    <li><strong>Compare Plans</strong> - Side-by-side comparisons of our insurance products</li>
+                                    <li><strong>Calculate Premiums</strong> - Get instant quotes based on your needs</li>
+                                    <li><strong>Explain Coverage</strong> - Understand what's included in each plan</li>
+                                    <li><strong>Answer Questions</strong> - Get detailed information about insurance terms and policies</li>
+                                </ul>
+                                <div class="suggestion-cards">
+                                    <div class="suggestion-card" onclick="sendMessage('Compare term life and whole life insurance')">
+                                        <span class="card-icon">📊</span>
+                                        <span>Compare life insurance options</span>
+                                    </div>
+                                    <div class="suggestion-card" onclick="sendMessage('Calculate premium for a 35-year-old')">
+                                        <span class="card-icon">💰</span>
+                                        <span>Calculate my premium</span>
+                                    </div>
+                                    <div class="suggestion-card" onclick="sendMessage('What health insurance plan is best for a family?')">
+                                        <span class="card-icon">👨‍👩‍👧‍👦</span>
+                                        <span>Family coverage options</span>
+                                    </div>
+                                    <div class="suggestion-card" onclick="sendMessage('How do I file a claim?')">
+                                        <span class="card-icon">📋</span>
+                                        <span>Claims process</span>
+                                    </div>
+                                </div>
+                                <p>How can I help you today?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Ask me anything about insurance..."
+                        rows="1"
+                        onkeydown="handleKeyPress(event)"></textarea>
+                    <div class="input-actions">
+                        <button class="btn-attach" title="Attach file">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>
+                            </svg>
+                        </button>
+                        <button class="btn-send" onclick="sendCurrentMessage()" id="sendButton">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-footer">
+                    <span>SecureLife GPT can make mistakes. Please verify important information.</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/marked.min.js"></script>
+    <script src="js/gpt-page.js"></script>
+    <script src="js/tracking.js"></script>
+</body>
+</html>

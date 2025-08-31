@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Life Insurance - SecureLife Insurance</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/plan-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" data-track="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="../../index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 10V30M10 20H30" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>SecureLife</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#products">Products</a></li>
+                    <li><a href="../../index.html#gpt">SecureLife GPT</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                    <li><a href="#" class="btn-quote" onclick="openQuoteModal()">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a> > 
+                <a href="../../life-insurance.html">Life Insurance</a> > 
+                <span>Universal Life Insurance</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Hero Section -->
+    <section class="plan-hero" data-track-view="universal-life-hero">
+        <div class="container">
+            <div class="plan-hero-content">
+                <div class="plan-hero-text">
+                    <div class="plan-badge">Flexible Coverage</div>
+                    <h1>Universal Life Insurance</h1>
+                    <p class="plan-tagline">Flexible premiums and death benefits with investment options</p>
+                    <div class="plan-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🔄</span>
+                            <span>Flexible premiums</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📊</span>
+                            <span>Adjustable coverage</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💰</span>
+                            <span>Tax-deferred growth</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" onclick="startApplication('universal-life')" data-track-click="start-universal-life-app">Apply Now</button>
+                        <button class="btn btn-secondary btn-lg" onclick="downloadBrochure('universal-life')" data-track-click="download-universal-brochure">
+                            <span>📥</span> Download Brochure
+                        </button>
+                        <button class="btn btn-outline btn-lg" onclick="scheduleConsultation('universal-life')" data-track-click="schedule-consultation">
+                            <span>📞</span> Talk to Expert
+                        </button>
+                    </div>
+                </div>
+                <div class="plan-hero-image">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600" alt="Universal Life Insurance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Details -->
+    <section class="plan-details" data-track-view="universal-life-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Coverage Details -->
+                <div class="details-card">
+                    <h2>Coverage Details</h2>
+                    <div class="coverage-table">
+                        <div class="coverage-row">
+                            <span class="coverage-label">Coverage Type</span>
+                            <span class="coverage-value">Permanent (lifetime)</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Death Benefit</span>
+                            <span class="coverage-value">$100,000 - $3,000,000</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Premium Flexibility</span>
+                            <span class="coverage-value">Adjust anytime</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Cash Value</span>
+                            <span class="coverage-value">Interest-bearing account</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Interest Rate</span>
+                            <span class="coverage-value">Current: 4.5% (minimum 2%)</span>
+                        </div>
+                        <div class="coverage-row">
+                            <span class="coverage-label">Age Range</span>
+                            <span class="coverage-value">0-80 years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Benefits -->
+                <div class="details-card">
+                    <h2>Key Benefits</h2>
+                    <ul class="benefits-list">
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Premium Flexibility</strong>
+                                <p>Increase, decrease, or skip payments based on your financial situation</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Adjustable Death Benefit</strong>
+                                <p>Modify coverage amount as your needs change</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Cash Value Growth</strong>
+                                <p>Competitive interest rates with guaranteed minimum</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Tax Advantages</strong>
+                                <p>Tax-deferred growth and tax-free loans</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <div>
+                                <strong>Access to Funds</strong>
+                                <p>Partial withdrawals and policy loans available</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Types of Universal Life -->
+            <div class="details-card">
+                <h2>Types of Universal Life Insurance</h2>
+                <div class="plans-grid">
+                    <div class="plan-box">
+                        <h3>Traditional Universal Life</h3>
+                        <p>Fixed interest rate with guaranteed minimum. Most stable option with predictable growth.</p>
+                        <ul>
+                            <li>Current rate: 4.5%</li>
+                            <li>Minimum guarantee: 2%</li>
+                            <li>Low risk</li>
+                        </ul>
+                    </div>
+                    <div class="plan-box">
+                        <h3>Indexed Universal Life</h3>
+                        <p>Returns tied to stock market index performance with downside protection.</p>
+                        <ul>
+                            <li>S&P 500 linked</li>
+                            <li>0% floor protection</li>
+                            <li>Cap rate: 10-12%</li>
+                        </ul>
+                    </div>
+                    <div class="plan-box">
+                        <h3>Variable Universal Life</h3>
+                        <p>Direct investment in sub-accounts for maximum growth potential.</p>
+                        <ul>
+                            <li>Multiple fund options</li>
+                            <li>Professional management</li>
+                            <li>Higher risk/reward</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-items">
+                    <div class="faq-item" data-track-click="faq-item">
+                        <div class="faq-question">
+                            <h3>How flexible are the premiums?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can adjust your premium payments up or down, or even skip payments if there's sufficient cash value to cover the insurance costs. This flexibility helps during financial ups and downs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-track-click="faq-item">
+                        <div class="faq-question">
+                            <h3>What's the difference from whole life?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Universal life offers flexible premiums and death benefits, while whole life has fixed premiums. Universal life typically has lower initial costs but requires more active management.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-track-click="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I change my death benefit?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can increase or decrease your death benefit. Increases may require additional underwriting, while decreases can be made without medical review.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>SecureLife Insurance</h4>
+                    <p>Your trusted partner since 1970.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact</h5>
+                    <p>📞 1-800-SECURE-1</p>
+                    <p>✉️ info@securelife.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/tracking.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/plan-details.js"></script>
+    <script src="../../js/brochure-generator.js"></script>
+    <script src="../../js/gpt-chat.js"></script>
+</body>
+</html>
